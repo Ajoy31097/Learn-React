@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import Styles from "./Components/ExpenseItem.css";
+// import Styles from "../Components/Expenses/ExpenseItem.css";
 
-import ExpenseItem from "./Components/ExpenseItem";
+import ExpenseItem from "./Components/Expenses/ExpenseItem";
 
 function App() {
 
