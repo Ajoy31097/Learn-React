@@ -1,10 +1,13 @@
-function ExpenseItem() {
-    return <div>
-        <h2>Expense Items</h2>
-        <h4>Food Rs 10</h4>
-        <h4>Petrol Rs 100</h4>
-        <h4>Movies Rs 200</h4>
+
+
+function ExpenseItem(props) {
+    return <div className="expense-item-date">
+        <div>{props.date.toISOString()}</div>
+        <div className="expense-item__description">
+            <h2>{props.title}</h2>
+            <div className="expense-item_location"><h2>{props.location}</h2></div>
+            <div className="expense-item__price">Rs {props.amount}</div>
+        </div>
     </div>
 }
-
 export default ExpenseItem;
