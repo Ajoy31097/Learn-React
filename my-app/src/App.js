@@ -1,4 +1,5 @@
 import ExpenseItem from "./Components/Expenses/ExpenseItem";
+import ExpenseForm from "./Components/Expenses/ExpenseForm";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div>
       <h1>Expense Items</h1>
+      <ExpenseForm />
       {expenses.map((expense, index) => (
         <ExpenseItem
           title={expense.title}
