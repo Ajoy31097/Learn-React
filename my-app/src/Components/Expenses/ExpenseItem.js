@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import "./ExpenseItem.css"
 import ExpenseDate from "./ExpenseDate";
 import ExpenseDetails from "./ExpenseDetails";
-import Card from "../UI/Card.js"
+import Card from "../UI/Card"
 
 function ExpenseItem(props) {
     const [title, setTitle] = useState(props.title);
@@ -25,9 +25,9 @@ function ExpenseItem(props) {
     return <Card><div className="expense-item-date">
         <ExpenseDate date={props.date} />
         <ExpenseDetails amount={amount} location={props.location} title={title} />
-        <button onClick={clickHandler}>Change Title</button>
-        <button onClick={deleteHandler}>Delete Expense</button>
-        <button onClick={hundredHandler}>$100</button>
+        <button onClick={clickHandler} className="expense-item__price">Change Title</button>
+        <button onClick={deleteHandler} className="expense-item__price">Delete Expense</button>
+        <button onClick={hundredHandler} className="expense-item__price">$100</button>
     </div></Card>
 }
 export default ExpenseItem;
