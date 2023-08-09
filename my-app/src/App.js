@@ -32,17 +32,26 @@ function App() {
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      {filteredExpenses.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          location={expense.location}
-          date={expense.date}
-        />
-      ))}
+      {filteredExpenses.length === 0 ? (
+        <p>No Expenses Found</p>
+      ) : (
+        <>
+          {filteredExpenses.length === 1 ? (
+            <p>Only a single Expense here. Please add more...</p>
+          ) : null}
+          {filteredExpenses.map((expense) => (
+            <ExpenseItem
+              key={expense.id}
+              title={expense.title}
+              amount={expense.amount}
+              location={expense.location}
+              date={expense.date}
+            />
+          ))}
+        </>
+      )}
     </div>
-  );
-}
+  ); 
+          } 
 
 export default App;
